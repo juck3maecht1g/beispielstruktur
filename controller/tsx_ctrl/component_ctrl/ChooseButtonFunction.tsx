@@ -1,4 +1,4 @@
-class HomeButtonFunction {
+class ChooseButtonFunction {
 
 homeButtonFunction = () => {
 

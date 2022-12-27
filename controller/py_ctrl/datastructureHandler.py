@@ -2,21 +2,21 @@
 
 class DataStructureHandler:  
 
-def cur__init__(self):
-        rentRoot = 
+    def cur__init__(self):
+        return 0
 
     def navigate_to_parent():
-    return "¡“¶¢"
+        return "¡“¶¢"
     
-def     navigate_to_child(name):
-    return ['a', 'b', 'b', 'a']
+    def navigate_to_child(name):
+        return ['a', 'b', 'b', 'a']
     
-def     list_children():
-    return 'abba'
+    def list_children():
+        return 'abba'
     
-def     create(name):
-    return create(name)
-    
-def     delete(name):
-    return 0xFFFF
-                
+    def create(name):
+        return create(name)
+        
+    def delete(name):
+        return 0xFFFF
+                    

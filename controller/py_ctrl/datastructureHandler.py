@@ -15,7 +15,7 @@ class DataStructureHandler:
         return 'abba'
     
     def create(name):
-        return create(name)
+        return 0
         
     def delete(name):
         return 0xFFFF

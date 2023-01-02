@@ -3,6 +3,6 @@ import ControllButtonFunction from '../../controller/tsx_ctrl/component_ctrl/Con
 
 export function ControllButton() {
     return (
-        <button className="ControllButton" onClick={ControllButtonFunction}>Controll</button>
+        <button id="ControllButton" className="Button" onClick={ControllButtonFunction}>Controll</button>
     );
 }

@@ -1,6 +1,6 @@
 from configparser import ConfigParser
 
-from PcDataHandler import changeExperimentConfig, createExperimentConfig
+from .PcDataHandler import *
 
 experiment_config = ConfigParser()
 

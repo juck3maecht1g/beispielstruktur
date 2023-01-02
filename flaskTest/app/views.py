@@ -16,6 +16,7 @@ def about():
 @app.route("/post-data", methods=['POST'])
 def post_data():
     data = request.get_json()
+    
     with open('testing.txt', 'w') as f:
         f.write(data)
         

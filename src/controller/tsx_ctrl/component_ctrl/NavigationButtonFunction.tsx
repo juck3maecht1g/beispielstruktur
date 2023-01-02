@@ -1,0 +1,6 @@
+class NavigationButtonFunction {
+
+navigationButtonFunction = () => {
+
+}
+}

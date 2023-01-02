@@ -3,7 +3,7 @@ const path = require("path")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
-    entry: "./index.tsx",
+    entry: "./src/controller/tsx_ctrl/index.tsx",
     
     resolve: {
         extensions: [
@@ -18,12 +18,13 @@ module.exports = {
 
     plugins: [
         new HTMLWebpackPlugin({
-            template: "./index.html"
+            template: "./src/controller/tsx_ctrl/index.html"
         })
     ],
 
     module: {
         rules: [
+            
             {
                 test: /.tsx$/,
                 exclude: /node_modules/,

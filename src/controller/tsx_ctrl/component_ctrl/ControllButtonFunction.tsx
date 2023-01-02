@@ -1,0 +1,6 @@
+class ControllButtonFunction {
+
+controllButtonFunction = () => {
+
+}
+}

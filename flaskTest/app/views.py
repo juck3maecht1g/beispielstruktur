@@ -1,6 +1,8 @@
+
+import sys
 from app import app
 import json
-from flask import request
+from flask import request, redirect
 
 
 @app.route("/commands")
@@ -16,9 +18,13 @@ def about():
 @app.route("/post-data", methods=['POST'])
 def post_data():
     data = request.get_json()
+    if data == 'abc' : 
+        return 'Done', 201
+
     
     with open('testing.txt', 'w') as f:
         f.write(data)
+        
         
     return 'Done', 201
 

@@ -1,6 +1,5 @@
-class StartButtonFunction {
-
-startButtonFunction = () => {
-
+function StartButtonFunction() {
+    console.log("yes")
+    
 }
-}
+export default StartButtonFunction;

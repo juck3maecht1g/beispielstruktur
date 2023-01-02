@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot"
   },
@@ -11,9 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^6.7.3",
     "dom": "^0.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1",
+    "style-loader": "^3.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
@@ -24,9 +26,6 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
-  }, 
+  },
   "proxy": "htt"
-
-
-
 }

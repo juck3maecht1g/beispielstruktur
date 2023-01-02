@@ -1,6 +1,6 @@
-class ControllButtonFunction {
+function ControllButtonFunction() {
 
-controllButtonFunction = () => {
 
 }
-}
+
+export default ControllButtonFunction;

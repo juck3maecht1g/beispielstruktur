@@ -1,3 +1,7 @@
+from ExperimentConfigHandler import createEConfig
+from PcDataHandler import createDirectory, navigate_to_child, navigate_to_parent
+
+
 def start_logging():
     return 0
 
@@ -12,3 +16,8 @@ def save_logging():
 
 def build_scene(robotList):
     return 0
+
+def create_experiment(name):
+    createDirectory(name)
+    navigate_to_child(name)
+    createEConfig()

@@ -3,7 +3,7 @@ import json
 from flask import request
 
 
-@app.route("/")
+@app.route("/commands")
 def members(): 
     data = {'members': 'M1'}
     return data

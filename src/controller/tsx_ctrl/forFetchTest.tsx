@@ -1,23 +1,25 @@
 import React, {useState, useEffect} from 'react'
 
 export function ForFetchTest() {
-
+    let toLog= {}
     const [test, setTest] = useState({})
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/").then(
-            res => {
-            res.json
-            console.log(res)
-            }
-        ).then(
-          response => {
-          console.log('data: ' + response)
-          setTest(response)
-          console.log('test: ' + test)
-          
-        })
-    }, [])
+      // fetch data
+      const dataFetch = async () => {
+        const data = await (
+          await fetch(
+            "http://127.0.0.1:5000/commands"
+          )
+        ).json();
+            console.log(data)
+        // set state when the data received
+        toLog = data
+        console.log(toLog)
+      };
+  
+      dataFetch();
+    }, []);
 
     
 

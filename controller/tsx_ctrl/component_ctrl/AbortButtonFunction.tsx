@@ -1,6 +1,0 @@
-class AbortButtonFunction{
-
-    abortButtonFunction = () => {
-
-    }
-}

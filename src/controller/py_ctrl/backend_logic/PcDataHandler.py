@@ -1,7 +1,7 @@
 #Todo sauberes Error handling
+from .root_dir import root_path
 
-
-root = r"C:\Users\morit\OneDrive\Desktop\Datastructure"
+root = root_path
 global_config_file = "global_config.ini"
 experiment_config_file = "experiment_config.ini"
 

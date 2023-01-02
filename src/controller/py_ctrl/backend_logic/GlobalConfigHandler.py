@@ -1,5 +1,5 @@
 from configparser import ConfigParser
-from PcDataHandler import createGlobalConfig, changeGlobalConfig
+from .PcDataHandler import createGlobalConfig, changeGlobalConfig
 
 
 

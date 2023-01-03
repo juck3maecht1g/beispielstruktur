@@ -8,7 +8,7 @@ export function StartButton() {
     var name = GetStartButtonInfo();
     return (
         <Link to="/SteuerungStop">
-              <button id="StartButton"className="Button" onClick={StartButtonFunction}>Start + {name}</button>
+              <button id="StartButton"className="Button" onClick={StartButtonFunction}>Start {name}</button>
         </Link>
             );
 }

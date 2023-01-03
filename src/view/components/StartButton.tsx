@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 export function StartButton() {
     var name = GetStartButtonInfo();
     return (
-        <Link to="/SteuerungStop">
+        <Link className="Link" to="/SteuerungStop">
               <button id="StartButton"className="Button" onClick={StartButtonFunction}>Start {name}</button>
         </Link>
             );

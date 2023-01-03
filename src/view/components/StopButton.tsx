@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 export function StopButton() {
     return (
-        <Link to="/SteuerungStart">
+        <Link className="Link" to="/SteuerungStart">
             <button id="StopButton" className="Button" onClick={StopButtonFunction}>Stop</button>
         </Link>
     );

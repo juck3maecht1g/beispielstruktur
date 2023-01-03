@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 export function SavePositionButton() {
     return (
-        <Link to="/SavePosition">
+        <Link className="Link" to="/SteuerungStart">
             <button id="AbortButton" className="Button" onClick={AbortButtonFunction}>Abort</button>
         </Link>
     );

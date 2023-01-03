@@ -1,9 +1,9 @@
 #Todo sauberes Error handling
+
 from .root_dir import root_path
 
 root = root_path
-global_config_file = "global_config.ini"
-experiment_config_file = "experiment_config.ini"
+
 
 import shutil
 import os
@@ -23,46 +23,31 @@ def navigate_to_child(name):
 def list_children():
     return os.listdir()
 
-def createGlobalConfig(global_config):
-    old_path = os.getcwd()
+
+def change_directory(path):
+    os.chdir(path)
+
+def change_directory_to_root():
     os.chdir(root)
-    
-    if not (global_config_file in list_children()):
-        with open(global_config_file, "w") as config_file:
-            global_config.write(config_file)
 
-    os.chdir(old_path)
+def get_cwd():
+    return os.getcwd()
 
-def changeGlobalConfig(global_config):
-    old_path = os.getcwd()
-    os.chdir(root)
-    
-    with open(global_config_file, "w") as config_file:
-        global_config.write(config_file)
+def cwd_contains(name):
+    return name in list_children()
 
-    os.chdir(old_path)
+def is_root():
+    return root == os.getcwd()
 
-def createExperimentConfig(experiment_config):
-    if not (root == os.getcwd()):
+def is_child_from_root():
+    return root == os.path.dirname(os.getcwd())
 
-        if(root == os.path.dirname(os.getcwd())):
-            if not (experiment_config_file in list_children()):
-                with open(experiment_config_file, "w") as config_file:
-                    experiment_config.write(config_file)
-
-        elif not (experiment_config_file in list_children()):
-            target = os.path.join(os.getcwd(), experiment_config_file)
+def copy_file_from_parent(name):
+    if not (name in list_children()):
+            target = os.path.join(os.getcwd(), name)
             parent = os.path.dirname(os.getcwd())
-            file_in_parent = os.path.join(parent, experiment_config_file)
+            file_in_parent = os.path.join(parent, name)
             shutil.copyfile(file_in_parent, target)
-
-    
-
-def changeExperimentConfig(experiment_config):
-    if not (root == os.getcwd()):
-        with open(experiment_config_file, "w") as config_file:
-            experiment_config.write(config_file)
-
 
 def createDirectory(name):
     if not (name in list_children()):
@@ -76,11 +61,3 @@ def deleteDirectory(name):
     remove_path = os.path.join(os.getcwd(), name)
     shutil.rmtree(remove_path)
     
-#notwendig?
-def delete(name):
-    if (name in list_children()):
-        if('.' in name):
-            deleteFile(name)
-        else:
-            deleteDirectory(name)
-    return None

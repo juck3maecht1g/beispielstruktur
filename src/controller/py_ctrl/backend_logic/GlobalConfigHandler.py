@@ -1,9 +1,11 @@
 from configparser import ConfigParser
-from .PcDataHandler import createGlobalConfig, changeGlobalConfig
+from PcDataHandler import get_cwd, change_directory_to_root, change_directory, cwd_contains
 
 
 
 global_config = ConfigParser()
+global_config_file = "global_config.ini"
+
 global_config["DEFAULT"] = {
     "user": "Max"
 }
@@ -20,8 +22,27 @@ global_config["Moritz"] = {
     "available_laboratories": ["Lab1","Lab2"]
 }
 
-def createGConfig():
-    createGlobalConfig(global_config)
+def createGlobalConfig():
+    old_path = get_cwd()
+    change_directory_to_root()
+    
+    if not (cwd_contains(global_config_file)):
+        with open(global_config_file, "w") as config_file:
+            global_config.write(config_file)
+
+    global_config.read(global_config_file)
+    change_directory(old_path)
+
+def changeGlobalConfig():
+    old_path = get_cwd()
+    change_directory_to_root()
+    
+    if (cwd_contains(global_config_file)):
+        with open(global_config_file, "w") as config_file:
+            global_config.write(config_file)
+
+    change_directory(old_path)
+    
 
 def get_user():
     return global_config.get("DEFAULT", "user")
@@ -29,7 +50,7 @@ def get_user():
 def set_user(new_user):
     if(new_user in global_config.sections()):
         global_config.set("DEFAULT", "user" , new_user)
-        changeGlobalConfig(global_config)
+        changeGlobalConfig()
 
 
 def get_users():
@@ -40,19 +61,19 @@ def get_language():
 
 def set_language(new_language):
     global_config.set(get_user(), "language" , new_language)
-    changeGlobalConfig(global_config)
+    changeGlobalConfig()
 
 def get_available_robots():
     return global_config.get(get_user(), "available_robots")
 
 def set_available_robots(new_available_robots):
     global_config.set(get_user(), "available_robots" , new_available_robots)
-    changeGlobalConfig(global_config)
+    changeGlobalConfig()
 
 def get_available_laboratories():
     return global_config.get(get_user(), "available_laboratories")
 
 def set_available_laboratories(new_available_laboratories):
     global_config.set(get_user(), "available_laboratories" , new_available_laboratories)
-    changeGlobalConfig(global_config)
+    changeGlobalConfig()
 

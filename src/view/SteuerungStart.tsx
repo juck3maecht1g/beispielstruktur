@@ -4,7 +4,7 @@ import {ControllButton} from "./components/ControllButton"
 
 function SteuerungsStart() {
     return (
-        <h1><StartButton></StartButton>
+        <h1><StartButton />
         
         <ControllButton></ControllButton></h1>
     );

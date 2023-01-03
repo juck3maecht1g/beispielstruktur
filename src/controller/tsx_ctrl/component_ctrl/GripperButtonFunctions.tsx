@@ -1,6 +1,6 @@
 import { json } from "react-router-dom"
 import React, {useState, useEffect} from 'react'
-const start_key = "start";
+const gripper_key = "open";
 
 /**type FetchedData ={
   state: string;
@@ -8,14 +8,14 @@ const start_key = "start";
 };
 **/
 
-export function StartButtonFunction() {
+export function GripperButtonFunctionShort() {
   
-    const response = fetch("http://127.0.0.1:5000/start-cmd", {
+    const response = fetch("http://127.0.0.1:5000/gripper-cmd", {
       'method': 'POST',
        headers : {
         'Content-Type': 'application/json'
       },
-      body : JSON.stringify(start_key)
+      body : JSON.stringify(gripper_key)
       }).then(res => {
     
       if (res.ok) {
@@ -31,15 +31,21 @@ export function StartButtonFunction() {
   
 
 
-  export function GetStartButtonInfo() {
+  export function GetGripperButtonInfo() {
     
-    var [name, setName] = React.useState(start_key)
+    var [ips, setIPs] = React.useState([])
         // fetch data
         useEffect(() => {
           fetch(
-              "http://127.0.0.1:5000/start-info"
-            ).then(response => response.json()).then(data => { setName(data);})
+              "http://127.0.0.1:5000/gripper-info"
+            ).then(response => response.json()).then(data => { setIPs(data);})
           
         }, [])
-      return name
+        console.log(ips)
+        var a = "";
+        ips.forEach(function (value) {
+            a += value + ", ";
+        })
+
+      return a
   }

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
 export function ForFetchTest() {
-    let toLog= {}
     const [test, setTest] = useState({})
 
     useEffect(() => {
@@ -9,15 +8,14 @@ export function ForFetchTest() {
       const dataFetch = async () => {
         const data = await (
           await fetch(
-            "http://127.0.0.1:5000/commands"
+            "http://127.0.0.1:5000/start-info"
           )
         ).json();
-            console.log(data)
         // set state when the data received
-        toLog = data
-        console.log(toLog)
+        setTest(data)
       };
-  
+      
+      //console.log(dataFetch())
       dataFetch();
     }, []);
 

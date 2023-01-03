@@ -1,19 +1,59 @@
-.StartButton {
+.Button{
+    float: left;
     cursor: pointer;
     background-color: pink;
     color: black;
     padding: 10px 50px;
     font-size: 23px;
+    position: fixed;
+    width: 250px;
+    text-align: center;
+    margin: 0px auto;
 }
-.ControllButton {
-    cursor: pointer;
+.Bar{
+    overflow: hidden;
+    top: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+}
+#StartButton {
+    top: 340px;
+}
+#ControllButton { 
+    top: 280px;
+}
+#AbortButton{
+    top: 340px;
+    left: 130px;
+    width: 125px;
+    text-align: center;
+}
+#ResetButton{
+    top: 100px;
+}
+#SavePositionButton{
+    top: 160px;
+}
+#GripperButton{
+    top: 220px;
+}
+#StopButton{
+    top: 340px;
+    width: 125px;
+    text-align: center;
+}
+#Navbar{
     background-color: pink;
-    color: black;
-    padding: 10px 50px;
-    font-size: 23px;
-    margin-left: 20px;
+    bottom: 0;
 }
-.Navbar{
+#Topbar{
+    background-color: pink;
+}
+
+.Page{
     background-color: black;
-    padding: 10px 30px;
+}
+.Link{
+
 }

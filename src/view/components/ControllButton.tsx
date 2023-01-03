@@ -6,6 +6,6 @@ export function ControllButton() {
     let ips = GetGripperButtonInfo()
     
     return (
-        <button className="ControllButton" onClick={GripperButtonFunctionShort}>Controll + {ips}</button>
+        <button id="ControllButton" className="Button" onClick={ControllButtonFunction}>Controll</button>
     );
 }

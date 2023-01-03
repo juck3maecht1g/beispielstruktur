@@ -4,18 +4,14 @@ import './Styles.css';
 
 function Navbar() {
   return (
-    <nav className="Navbar">
+    <nav id="Navbar" className="Bar">
       <ul>
-        <li>
-            <Link to="">
+        <Link className="Link" to="">
               <button> Home </button>
-            </Link>
-        </li>
-        <li>
-            <Link to="/SteuerungStart">
+        </Link>
+        <Link className="Link" to="/SteuerungStart">
               <button> SteuerungStart </button>
-            </Link>
-        </li>
+        </Link>
       </ul>
     </nav>
   );

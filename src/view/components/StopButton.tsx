@@ -1,9 +1,12 @@
 import React from 'react';
+import StopButtonFunction from '../../controller/tsx_ctrl/component_ctrl/StopButtonFunction';
+import './Styles.css';
+import {Link} from "react-router-dom";
 
-function StopButton() {
+export function StopButton() {
     return (
-        <div className="StopButton">
-            <button>Stop</button>
-        </div>
+        <Link to="/SteuerungStart">
+            <button id="StopButton" className="Button" onClick={StopButtonFunction}>Stop</button>
+        </Link>
     );
 }

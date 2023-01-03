@@ -4,3 +4,4 @@ stopButtonFunction = () => {
 
 }
 }
+export default StopButtonFunction;

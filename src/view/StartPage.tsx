@@ -1,8 +1,9 @@
 import React from 'react';
+import './components/Styles.css';
 
 function StartPage() {
     return (
-        <h1>this is the homepage</h1>
+        <h1 id="Startpage" className="Page"> </h1>
     );
 }
 

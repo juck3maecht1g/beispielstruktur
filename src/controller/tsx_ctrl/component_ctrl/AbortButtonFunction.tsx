@@ -4,3 +4,5 @@ class AbortButtonFunction{
 
     }
 }
+
+export default AbortButtonFunction;

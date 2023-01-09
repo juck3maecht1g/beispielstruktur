@@ -1,17 +1,28 @@
-from GlobalConfigHandler import createGlobalConfig, get_user, get_users, set_user, set_language
-from ExperimentManager import create_experiment
-from ExperimentConfigHandler import get_variables
-from PcDataHandler import navigate_to_parent, get_cwd
 
-createGlobalConfig()
+from src.model.data.config.ExperimentConfigHandler import *
+from src.model.data.config.GlobalConfigHandler import *
+from src.model.data.PcDataHandler import *
 
-original_user = get_user()
-for user in get_users():
-    create_experiment(user)
-    navigate_to_parent()
-print(get_cwd())
-print(get_variables())
-set_user(original_user)
+
+root_path = r"C:\Users\morit\OneDrive\Desktop\Datastructure"
+experiment_config_file = "experiment_config.yml"
+global_config_file = "global_config.yml"
+
+data_handler = PcDataHandler(root_path)
+experiment_config = ExperimentConfigHandler(data_handler, experiment_config_file)
+global_config = GlobalConfigHandler(data_handler, global_config_file)
+
+
+global_config.create_config()
+
+original_user = global_config.get_user()
+
+for user in global_config.get_users():
+    data_handler.createDirectory(user)
+    data_handler.navigate_to_child(user)
+    experiment_config.create_config()
+    
+global_config.set_user(original_user)
 
 
 

@@ -1,5 +1,5 @@
-from ExperimentConfigHandler import createExperimentConfig
-from PcDataHandler import createDirectory, navigate_to_child
+from model.data.config.ExperimentConfigHandler import createExperimentConfig
+from src.model.data.PcDataHandler import createDirectory, navigate_to_child
 
 
 def start_logging():

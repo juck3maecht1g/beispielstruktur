@@ -1,6 +1,0 @@
-class ChooseButtonFunction {
-
-homeButtonFunction = () => {
-
-}
-}

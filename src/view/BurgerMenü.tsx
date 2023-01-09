@@ -7,7 +7,7 @@ function Burgermenü() {
 
     return (
         <h1>
-            <button.render></button.render>
+            <ChooseButton name="hallo"/>
         </h1>
     );
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import './components/Styles.css';
+import ChoosePage from './ChoosePage'
 
 class ChooseRobotPage extends React.Components {
     render() {

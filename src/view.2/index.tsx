@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDom from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../view/Layout";
-import Home from "../view/StartPage";
-import "./controllPage/ControllPage";
-import SteuerungStop from "../view/SteuerungStop";
-import Burgermenü from "../view/BurgerMenü";
+import ControlPage from "./controlPage/ControllPage";
+import ChooseRobotPage from "./choosePage/ChooseRobotPage";
+import Layout from "./../view/Layout"
+import ChooseFolderPage from "./chooseFolderPage/ChooseFolderPage";
 
 export default class App extends React.Component {
   render() {
@@ -13,11 +12,10 @@ export default class App extends React.Component {
       <BrowserRouter>
         <Routes >
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="SteuerungStart" element={<SteuerungsStart />} />
-            <Route path="SteuerungStop" element={<SteuerungStop />} />
+            <Route index element={<ChooseFolderPage />} />
+            <Route path="ControlPage" element={<ControlPage />} />
+            <Route path="ChoosePage" element={<ChooseRobotPage/>} />
           </Route>
-          <Route path="Burgermenü" element={<Burgermenü />} />
         </Routes>
       </BrowserRouter>
     );

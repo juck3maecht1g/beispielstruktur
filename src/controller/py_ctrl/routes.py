@@ -14,9 +14,7 @@ def members():
     return data
 
 
-@app.route("/about")
-def about():
-    return "<h1 style='color: red'>About</h1>"
+
 
 
 @app.route("/post-data", methods=['POST'])

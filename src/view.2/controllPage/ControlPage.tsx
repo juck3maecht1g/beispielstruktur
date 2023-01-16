@@ -1,6 +1,6 @@
 import React from 'react'
 
-class ChooseExperimentPage extends React.Component {
+class ControlPage extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -14,4 +14,4 @@ class ChooseExperimentPage extends React.Component {
     }
 }
  
-export default ChooseExperimentPage;
+export default ControlPage;

@@ -3,7 +3,7 @@ import ReactDom from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../view/Layout";
 import Home from "../view/StartPage";
-import SteuerungsStart from "../view/SteuerungStart";
+import "./controllPage/ControllPage";
 import SteuerungStop from "../view/SteuerungStop";
 import Burgermenü from "../view/BurgerMenü";
 

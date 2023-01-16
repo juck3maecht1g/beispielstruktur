@@ -1,6 +1,6 @@
 
 from src.model.data.PcDataHandler import *
-import ConfigHandler
+from src.model.data.config.ConfigHandler import ConfigHandler
 
 experiment_config_file = "experiment_config.yml"
 

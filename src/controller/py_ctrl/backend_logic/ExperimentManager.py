@@ -1,4 +1,4 @@
-from model.data.config.ExperimentConfigHandler import createExperimentConfig
+from src.model.data.config.ExperimentConfigHandler import createExperimentConfig
 from src.model.data.PcDataHandler import createDirectory, navigate_to_child
 
 

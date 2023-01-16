@@ -3,7 +3,7 @@ import sys
 import os
 from __init__ import app
 import json
-from backend_logic.ExperimentManager import *
+#from backend_logic.ExperimentManager import *
 from flask import request 
 #from backend_logic.ExperimentManager import *
 
@@ -37,7 +37,7 @@ def post_data():
 def reset_cmd():
     data = request.get_json()
     if data == 'reset scene' : 
-            reset_scene()
+            #reset_scene()
             return 'Done', 201
     return 'wrong', 201
 
@@ -46,7 +46,7 @@ def reset_cmd():
 def save_position_cmd():
     data = request.get_json()
     if data == 'save position' : 
-            save_position()
+            #save_position()
             return 'Done', 201
     return 'wrong', 201
 
@@ -55,7 +55,7 @@ def save_position_cmd():
 def gripper_cmd():
     data = request.get_json()
     if data == 'open' : 
-            open_gripper()
+            #open_gripper()
             return 'Done', 201
     return 'wrong', 201
 
@@ -64,7 +64,7 @@ def gripper_cmd():
 def move_cmd():
     data = request.get_json()
     if data == 'move' : 
-            move_robot()
+            #move_robot()
             return 'Done', 201
     return 'wrong', 201
 
@@ -73,17 +73,17 @@ def move_cmd():
 def start_cmd():
     data = request.get_json()
     if data == 'start' : 
-            start_logging()
+            #start_logging()
             return 'Done', 201
     return 'wrong', 201
 
 @app.route("/gripper-info")
 def gripper_info(): 
-    data = json.dumps(get_gripper())
-    return data
+    #data = json.dumps(get_gripper())
+    return "not implemented"
 
 
 @app.route("/start-info")
 def start_info(): 
-    data = json.dumps(get_experiment_name())
-    return data
+    #data = json.dumps(get_experiment_name())
+    return "not implemented"
